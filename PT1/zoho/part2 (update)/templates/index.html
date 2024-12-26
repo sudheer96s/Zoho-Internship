@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking System</title>
+</head>
+<body>
+    <h1>Bus Booking System</h1>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST" action="/">
+        <!-- Select Date -->
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <!-- Select Agent -->
+        <label for="agent_id">Select Agent:</label>
+        <select id="agent_id" name="agent_id" required>
+            {% for agent in agents %}
+                <option value="{{ agent.agent_id }}">{{ agent.agent_name }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit">Check Buses</button>
+    </form>
+
+    <h2>Available Buses</h2>
+    <form action="{{ url_for('view_seats') }}" method="POST">
+        <input type="hidden" name="date" value="{{ session.get('selected_date') }}">
+        <input type="hidden" name="agent_id" value="{{ session.get('selected_agent') }}">
+        
+        <label for="bus_id">Select Bus:</label>
+        <select id="bus_id" name="bus_id" required>
+            {% for bus in buses %}
+                <option value="{{ bus.bus_id }}">{{ bus.bus_name }}{% if bus.status_message %} - {{ bus.status_message }}{% endif %}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">View Available Seats</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('cancel_booking') }}">Cancel Booking</a>
+
+    <h3>Visitor Count: {{ visitor_count }}</h3>
+
+</body>
+</html>

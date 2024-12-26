@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Bus Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bus-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .bus-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .bus-card h3 {
+            margin: 10px 0;
+        }
+
+        .bus-card button {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .bus-card button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Your Ticket</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/cancel">Cancel a Booking</a>
+            <a href="/admin">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Select Bus</h2>
+        <div class="bus-list">
+            <div class="bus-card">
+                <h3>Bus 1 - Route A to B</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=1"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 2 - Route B to C</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=2"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 3 - Route C to D</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=3"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 4 - Route D to E</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=4"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 5 - Route E to F</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=5"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 6 - Route F to G</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=6"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 7 - Route G to H</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=7"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 8 - Route H to I</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=8"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 9 - Route I to J</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=9"><button>Book Now</button></a>
+            </div>
+            <div class="bus-card">
+                <h3>Bus 10 - Route J to K</h3>
+                <p>Seats Available: 40</p>
+                <a href="/bus_seats.html?busid=10"><button>Book Now</button></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

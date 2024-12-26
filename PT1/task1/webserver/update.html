@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Your Details</title>
+</head>
+<body>
+    <h1>Update Your Details</h1>
+    <form action="/update" method="POST">
+        <label for="search_first_name">Current First Name:</label><br>
+        <input type="text" id="search_first_name" name="search_first_name" required><br><br>
+
+        <label for="search_last_name">Current Last Name:</label><br>
+        <input type="text" id="search_last_name" name="search_last_name" required><br><br>
+
+        <label for="new_first_name">New First Name:</label><br>
+        <input type="text" id="new_first_name" name="new_first_name"><br><br>
+
+        <label for="new_last_name">New Last Name:</label><br>
+        <input type="text" id="new_last_name" name="new_last_name"><br><br>
+
+        <label for="new_dob">New Date of Birth:</label><br>
+        <input type="date" id="new_dob" name="new_dob"><br><br>
+
+        <label for="new_place">New Place:</label><br>
+        <input type="text" id="new_place" name="new_place"><br><br>
+
+        <input type="submit" value="Update">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

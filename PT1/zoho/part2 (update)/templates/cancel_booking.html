@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Booking</title>
+</head>
+<body>
+    <h1>Cancel Booking</h1>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST" action="/cancel_booking">
+        <label for="bus_id">Bus ID:</label>
+        <input type="text" id="bus_id" name="bus_id" required><br>
+        <label for="seat_number">Seat Number:</label>
+        <input type="text" id="seat_number" name="seat_number" required><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name" name="user_name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required><br>
+        <label for="agent_id">Agent ID:</label>
+        <input type="text" id="agent_id" name="agent_id" required><br>  <!-- Added agent_id input -->
+        <button type="submit">Cancel Booking</button>
+    </form>
+</body>
+</html>

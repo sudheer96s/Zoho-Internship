@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <form method="POST" action="/admin_dashboard">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+        <button type="submit">View Buses</button>
+    </form>
+
+    {% if date %}
+        <h2>Buses for {{ date }}</h2>
+
+        <form method="POST" action="/admin_dashboard">
+            <input type="hidden" name="date" value="{{ date }}">
+
+            <label for="bus_id_1">Select Bus 1:</label>
+            <select id="bus_id_1" name="bus_id_1">
+                {% for bus in buses %}
+                    <option value="{{ bus.bus_id }}">{{ bus.bus_name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="bus_id_2">Select Bus 2:</label>
+            <select id="bus_id_2" name="bus_id_2">
+                {% for bus in buses %}
+                    <option value="{{ bus.bus_id }}">{{ bus.bus_name }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Merge Buses</button>
+        </form>
+
+        <h3>Load Factors:</h3>
+        <ul>
+            {% for bus in buses %}
+                <li>{{ bus.bus_name }}: {{ bus.load_factor }}</li>
+            {% endfor %}
+        </ul>
+
+    {% elif date is not none %}
+        <p>No buses available for the selected date.</p>
+    {% endif %}
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

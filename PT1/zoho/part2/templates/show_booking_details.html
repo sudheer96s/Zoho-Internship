@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+</head>
+<body>
+    <h1>Booking Details for Bus {{ bus_id }}</h1>
+
+    <!-- Display any message (success/error) here -->
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('confirm_booking') }}" method="POST">
+        <input type="hidden" name="date" value="{{ date }}">
+        <input type="hidden" name="bus_id" value="{{ bus_id }}">
+        <input type="hidden" name="bus_name" value="{{ bus_name }}">
+        <input type="hidden" name="seat_number" value="{{ seat_number }}">
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name" name="user_name" required>
+        <br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Book Now</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('view_seats') }}">Back to Available Seats</a>
+</body>
+</html>

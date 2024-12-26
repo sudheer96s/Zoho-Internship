@@ -1,0 +1,56 @@
+2024-09-17 15:28:10,875 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-17 15:28:10,875 INFO: [33mPress CTRL+C to quit[0m
+2024-09-17 15:28:10,876 INFO:  * Restarting with stat
+2024-09-17 15:28:11,089 WARNING:  * Debugger is active!
+2024-09-17 15:28:11,092 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:28:30,378 INFO: Database connection established successfully.
+2024-09-17 15:28:30,406 INFO: Visitor count updated to 135.
+2024-09-17 15:28:30,418 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:30] "GET / HTTP/1.1" 200 -
+2024-09-17 15:28:38,229 INFO: Database connection established successfully.
+2024-09-17 15:28:38,257 INFO: Visitor count updated to 136.
+2024-09-17 15:28:38,330 INFO: Database connection established successfully.
+2024-09-17 15:28:38,333 INFO: Load factor for date 2024-09-18: 0.0100
+2024-09-17 15:28:38,334 INFO: Displayed buses for date 2024-09-18.
+2024-09-17 15:28:38,337 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:38] "POST / HTTP/1.1" 200 -
+2024-09-17 15:28:41,908 INFO: Database connection established successfully.
+2024-09-17 15:28:41,910 ERROR: Error fetching seat availability: Unread result found
+2024-09-17 15:28:41,921 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:41] "[35m[1mPOST /view_seats HTTP/1.1[0m" 500 -
+2024-09-17 15:28:41,958 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:41] "[36mGET /view_seats?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-09-17 15:28:41,965 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:41] "[36mGET /view_seats?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-09-17 15:28:41,979 INFO: 127.0.0.1 - - [17/Sep/2024 15:28:41] "GET /view_seats?__debugger__=yes&cmd=resource&f=console.png&s=pQXKYDiukXkpk3dll7rH HTTP/1.1" 200 -
+2024-09-17 15:32:12,003 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:32:12,075 INFO:  * Restarting with stat
+2024-09-17 15:32:12,270 WARNING:  * Debugger is active!
+2024-09-17 15:32:12,273 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:32:20,988 INFO: Database connection established successfully.
+2024-09-17 15:32:20,991 INFO: Displayed seats for bus 10 on date 2024-09-18.
+2024-09-17 15:32:20,999 INFO: 127.0.0.1 - - [17/Sep/2024 15:32:20] "POST /view_seats HTTP/1.1" 200 -
+2024-09-17 15:32:26,977 INFO: Database connection established successfully.
+2024-09-17 15:32:26,997 INFO: Seat 13 on bus 10 set to waiting state for date 2024-09-18.
+2024-09-17 15:32:27,003 INFO: 127.0.0.1 - - [17/Sep/2024 15:32:27] "POST /book HTTP/1.1" 200 -
+2024-09-17 15:32:58,622 INFO: Database connection established successfully.
+2024-09-17 15:32:58,646 INFO: 127.0.0.1 - - [17/Sep/2024 15:32:58] "POST /confirm_booking HTTP/1.1" 200 -
+2024-09-17 15:37:27,068 INFO: Database connection established successfully.
+2024-09-17 15:39:14,786 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:39:14,854 INFO:  * Restarting with stat
+2024-09-17 15:39:15,113 WARNING:  * Debugger is active!
+2024-09-17 15:39:15,115 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:39:35,191 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:39:35,257 INFO:  * Restarting with stat
+2024-09-17 15:39:35,469 WARNING:  * Debugger is active!
+2024-09-17 15:39:35,471 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:39:36,481 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:39:36,550 INFO:  * Restarting with stat
+2024-09-17 15:39:36,752 WARNING:  * Debugger is active!
+2024-09-17 15:39:36,755 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:41:40,215 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:41:40,267 INFO:  * Restarting with stat
+2024-09-17 15:41:40,486 WARNING:  * Debugger is active!
+2024-09-17 15:41:40,490 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:41:41,499 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:41:41,567 INFO:  * Restarting with stat
+2024-09-17 15:41:41,810 WARNING:  * Debugger is active!
+2024-09-17 15:41:41,812 INFO:  * Debugger PIN: 118-852-373
+2024-09-17 15:41:42,822 INFO:  * Detected change in '/home/manchik-pt7714/Documents/zoho/part2/12.py', reloading
+2024-09-17 15:41:42,889 INFO:  * Restarting with stat

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form input {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            width: auto;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/book">Book a Ticket</a>
+            <a href="/cancel">Cancel a Booking</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Manage Buses</h2>
+        <form action="/admin/merge" method="POST">
+            <label for="bus1">Bus 1 ID:</label>
+            <input type="text" id="bus1" name="bus1" required><br>
+
+            <label for="bus2">Bus 2 ID:</label>
+            <input type="text" id="bus2" name="bus2" required><br>
+
+            <input type="submit" value="Merge Buses">
+        </form>
+    </section>
+</body>
+</html>

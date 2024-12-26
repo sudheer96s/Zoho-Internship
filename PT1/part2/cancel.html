@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form input {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            width: auto;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cancel Your Booking</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/book">Book a Ticket</a>
+            <a href="/admin">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Cancel Booking</h2>
+        <form action="/cancel_booking" method="POST">
+            <label for="busID">Bus ID:</label>
+            <input type="text" id="busID" name="busID" required><br>
+
+            <label for="seat">Seat Number:</label>
+            <input type="text" id="seat" name="seat" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <input type="submit" value="Cancel Booking">
+        </form>
+    </section>
+</body>
+</html>

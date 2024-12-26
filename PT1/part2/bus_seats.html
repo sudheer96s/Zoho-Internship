@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seat Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bus {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 20px repeat(4, 1fr); /* 4 seats, gap, 4 seats */
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .seat, .driver-seat {
+            background-color: #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .seat.available:hover {
+            background-color: #76c7c0;
+        }
+
+        .seat.selected {
+            background-color: #333;
+            color: white;
+        }
+
+        .seat.unavailable {
+            background-color: #f44336;
+            cursor: not-allowed;
+        }
+
+        .driver-seat {
+            background-color: #444;
+            color: white;
+            cursor: default;
+            grid-column: span 10; /* Span the entire width */
+            margin-bottom: 20px;
+        }
+
+        .row-number {
+            grid-column: span 10;
+            margin: 10px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bus-info {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Extra styling for gaps between seats */
+        .seat:nth-child(2n) {
+            margin-right: 10px; /* Gap between every two seats */
+        }
+
+        /* Styling to ensure the grid aligns with the driver seat */
+        .bus {
+            grid-template-columns: repeat(4, 1fr) 20px repeat(4, 1fr); /* Same as above for consistency */
+            grid-template-rows: repeat(10, auto); /* 10 rows for the seats */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bus Seat Selection</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/book">Book a Ticket</a>
+            <a href="/cancel">Cancel Booking</a>
+            <a href="/admin">Admin Dashboard</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Select Your Seat</h2>
+        <div class="bus-info" id="busInfo">Bus ID: </div>
+        <div class="bus">
+            <!-- Driver seat -->
+            <div class="driver-seat">Driver</div>
+
+            <!-- 10 rows with 4 seats each and gaps -->
+            <!-- Row 1 -->
+            <div class="seat available" data-seat="1">1</div>
+            <div class="seat available" data-seat="2">2</div>
+            <div class="seat available" data-seat="3">3</div>
+            <div class="seat available" data-seat="4">4</div>
+
+            <div class="row-number">Row 1</div>
+
+            <!-- Row 2 -->
+            <div class="seat available" data-seat="5">5</div>
+            <div class="seat available" data-seat="6">6</div>
+            <div class="seat available" data-seat="7">7</div>
+            <div class="seat available" data-seat="8">8</div>
+
+            <div class="row-number">Row 2</div>
+
+            <!-- Row 3 -->
+            <div class="seat available" data-seat="9">9</div>
+            <div class="seat available" data-seat="10">10</div>
+            <div class="seat available" data-seat="11">11</div>
+            <div class="seat available" data-seat="12">12</div>
+
+            <div class="row-number">Row 3</div>
+
+            <!-- Row 4 -->
+            <div class="seat available" data-seat="13">13</div>
+            <div class="seat available" data-seat="14">14</div>
+            <div class="seat available" data-seat="15">15</div>
+            <div class="seat available" data-seat="16">16</div>
+
+            <div class="row-number">Row 4</div>
+
+            <!-- Row 5 -->
+            <div class="seat available" data-seat="17">17</div>
+            <div class="seat available" data-seat="18">18</div>
+            <div class="seat available" data-seat="19">19</div>
+            <div class="seat available" data-seat="20">20</div>
+
+            <div class="row-number">Row 5</div>
+
+            <!-- Row 6 -->
+            <div class="seat available" data-seat="21">21</div>
+            <div class="seat available" data-seat="22">22</div>
+            <div class="seat available" data-seat="23">23</div>
+            <div class="seat available" data-seat="24">24</div>
+
+            <div class="row-number">Row 6</div>
+
+            <!-- Row 7 -->
+            <div class="seat available" data-seat="25">25</div>
+            <div class="seat available" data-seat="26">26</div>
+            <div class="seat available" data-seat="27">27</div>
+            <div class="seat available" data-seat="28">28</div>
+
+            <div class="row-number">Row 7</div>
+
+            <!-- Row 8 -->
+            <div class="seat available" data-seat="29">29</div>
+            <div class="seat available" data-seat="30">30</div>
+            <div class="seat available" data-seat="31">31</div>
+            <div class="seat available" data-seat="32">32</div>
+
+            <div class="row-number">Row 8</div>
+
+            <!-- Row 9 -->
+            <div class="seat available" data-seat="33">33</div>
+            <div class="seat available" data-seat="34">34</div>
+            <div class="seat available" data-seat="35">35</div>
+            <div class="seat available" data-seat="36">36</div>
+
+            <div class="row-number">Row 9</div>
+            <!-- Row 10 -->
+
+            <!-- Continue similarly for remaining rows -->
+
+            <!-- Row 10 -->
+            <div class="seat available" data-seat="37">37</div>
+            <div class="seat available" data-seat="38">38</div>
+            <div class="seat available" data-seat="39">39</div>
+            <div class="seat available" data-seat="40">40</div>
+
+            <div class="row-number">Row 10</div>
+        </div>
+    </section>
+
+    <script>
+        // Fetch bus ID from URL query parameters and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const busID = urlParams.get('busid');
+        document.getElementById('busInfo').innerText = "Bus ID: " + busID;
+
+        // JavaScript to handle seat selection
+        document.querySelectorAll('.seat.available').forEach(function(seat) {
+            seat.addEventListener('click', function() {
+                const seatNumber = this.getAttribute('data-seat');
+                // Redirect to seat_booking.html with busid and seat number as parameters
+                window.location.href = `/seat_booking?busid=${busID}&seat=${seatNumber}`;
+            });
+        });
+    </script>
+</body>
+</html>

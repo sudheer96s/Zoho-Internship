@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Seats</title>
+</head>
+<body>
+    <h1>Available Seats for {{ date }} - Bus {{ bus_id }}</h1>
+    
+    <form action="{{ url_for('book_seat') }}" method="POST">
+        <label for="user_name">User Name:</label>
+        <input type="text" id="user_name" name="user_name" required><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="seat_number">Select Seat:</label>
+        <select id="seat_number" name="seat_number">
+            {% for seat in available_seats %}
+                <option value="{{ seat.seat_number }}">{{ seat.seat_number }}</option>
+            {% endfor %}
+        </select><br>
+
+        <input type="hidden" name="bus_id" value="{{ bus_id }}">
+        <input type="hidden" name="date" value="{{ date }}">
+
+        <button type="submit">Book Now</button>
+    </form>
+</body>
+</html>

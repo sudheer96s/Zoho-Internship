@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Seat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Your Seat</h1>
+    </header>
+
+    <section>
+        <h2>Booking Details</h2>
+        <form id="bookingForm" action="/submit_booking" method="POST">
+            <input type="hidden" name="busid" id="busID" value="">
+            <input type="hidden" name="seat" id="seat" value="">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <script>
+        // Fetch bus ID and seat number from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const busID = urlParams.get('busid');
+        const seat = urlParams.get('seat');
+
+        // Set values in the form
+        document.getElementById('busID').value = busID;
+        document.getElementById('seat').value = seat;
+    </script>
+</body>
+</html>
